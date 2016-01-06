@@ -28,10 +28,8 @@ class App extends React.Component {
           )}
           <footer className='app footer inverted'>
             <ul className='ui menu container inverted'>
-              <li className='item'><a href='https://g0v.hackpad.com/moed7ct-taigi-neologism'>Hackpad</a></li>
-              <li className='item'>授權條款</li>
-              <li className='item'><a href='https://g0v.tw/'>g0v</a></li>
-              <li className='item'><a href='https://github.com/g0v/itaigi'>GitHub</a></li>
+              <li className='item'><a href='https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7/blob/master/LICENSE'>授權條款</a></li>
+              <li className='item'><a href='https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7'>GitHub</a></li>
             </ul>
           </footer>
         </div>

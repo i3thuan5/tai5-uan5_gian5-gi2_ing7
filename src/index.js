@@ -5,8 +5,6 @@ import Router, {Route, IndexRoute} from 'react-router'
 import HuanGing from './Iah/HuanGing/HuanGing'
 import App from './App/App'
 import Kong from './Iah/Kong/Kong'
-import Lun from './Iah/Lun/Lun'
-import The from './Iah/The/The'
 import Iong from './Iah/Iong/Iong'
 import Mia from './Iah/Mia/Mia'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
@@ -26,8 +24,6 @@ const root = document.getElementById('app')
       <Route path='/' component={App}>
         <IndexRoute component={Kong}/>
         <Route path='k(/:k)' component={Kong}/>
-        <Route path='l(/:k)' component={Lun}/>
-        <Route path='t(/:k)' component={The}/>
         <Route path='iong' component={Iong}/>
         <Route path='mia' component={Mia}/>
       </Route>
