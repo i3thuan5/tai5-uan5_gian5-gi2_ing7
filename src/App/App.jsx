@@ -24,7 +24,7 @@ class App extends React.Component {
             <ToLam/>
           </header>
           {React.cloneElement(this.props.children, 
-            {handleKong: this.kong.bind(this), 後端網址: 'http://db.itaigi.tw/'}
+            {handleKong: this.kong.bind(this), 後端網址: 'http://140.109.16.144/'}
           )}
           <footer className='app footer inverted'>
             <ul className='ui menu container inverted'>

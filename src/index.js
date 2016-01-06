@@ -4,14 +4,14 @@ import {render} from 'react-dom'
 import Router, {Route, IndexRoute} from 'react-router'
 import HuanGing from './Iah/HuanGing/HuanGing'
 import App from './App/App'
-import Kong from './Iah/Kong/Kong'
+import 查 from './頁/查/查'
 import Iong from './Iah/Iong/Iong'
 import Mia from './Iah/Mia/Mia'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import './app.css'
 
 import Debug from 'debug'
-Debug.enable('itaigi:ABo')
+Debug.enable('ing7:*')
 
 const root = document.getElementById('app')
 
@@ -22,8 +22,8 @@ const root = document.getElementById('app')
   render(
     <Router history={history}>
       <Route path='/' component={App}>
-        <IndexRoute component={Kong}/>
-        <Route path='k(/:k)' component={Kong}/>
+        <IndexRoute component={查}/>
+        <Route path='k(/:k)' component={查}/>
         <Route path='iong' component={Iong}/>
         <Route path='mia' component={Mia}/>
       </Route>
