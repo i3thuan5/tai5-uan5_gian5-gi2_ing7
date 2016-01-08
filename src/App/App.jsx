@@ -12,13 +12,9 @@ class App extends React.Component {
     super()
   }
 
-  換腔口 (val) {
+  跳到腔口語句 (腔口,語句) {
     this.props.history.replaceState(null,
-	'/k/' + val + '/' + this.props.params.ku)
-  }
-  跳到語句 (textarea) {
-    this.props.history.replaceState(null,
-	'/k/' + this.props.params.khiunn + '/' + textarea.target.value)
+	'/k/' + 腔口 + '/' + 語句)
   }
 
   render () {
@@ -29,8 +25,7 @@ class App extends React.Component {
           </header>
           {React.cloneElement(this.props.children, 
             {後端網址: 'http://140.109.16.144/',
-            換腔口: this.換腔口.bind(this),
-            跳到語句: this.跳到語句.bind(this),
+            跳到腔口語句: this.跳到腔口語句.bind(this)
             }
           )}
           <footer className='app footer inverted'>
