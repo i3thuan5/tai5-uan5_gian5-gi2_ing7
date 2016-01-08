@@ -7,13 +7,7 @@ import 翻譯結果 from '../../元素/翻譯結果/翻譯結果'
 
 var debug = Debug('ing7:查')
 
-class 查 extends React.Component {
-
-  componentWillMount () { this.props.setQueryParams(this.props) }
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.params === this.props.params) return
-    this.props.setQueryParams(nextProps)
-  }
+export default class 查 extends React.Component {
 
   render () {
     debug('rendering ')
