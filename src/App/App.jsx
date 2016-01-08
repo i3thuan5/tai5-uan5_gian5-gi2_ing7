@@ -12,9 +12,9 @@ class App extends React.Component {
     super()
   }
 
-  換腔口 (textarea) {
+  換腔口 (val) {
     this.props.history.replaceState(null,
-	'/k/' + textarea.target.value + '/' + this.props.params.ku)
+	'/k/' + val + '/' + this.props.params.ku)
   }
   跳到語句 (textarea) {
     this.props.history.replaceState(null,
