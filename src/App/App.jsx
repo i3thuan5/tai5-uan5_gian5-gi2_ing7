@@ -12,9 +12,13 @@ class App extends React.Component {
     super()
   }
 
+  換腔口 (textarea) {
+    this.props.history.replaceState(null,
+	'/k/' + textarea.target.value + '/' + this.props.params.ku)
+  }
   跳到語句 (textarea) {
-    console.log(this.props.history)
-    this.props.history.replaceState(null, '/k/閩南語/' + textarea.target.value)
+    this.props.history.replaceState(null,
+	'/k/' + this.props.params.khiunn + '/' + textarea.target.value)
   }
 
   render () {
@@ -24,7 +28,10 @@ class App extends React.Component {
             <ToLam/>
           </header>
           {React.cloneElement(this.props.children, 
-            {跳到語句: this.跳到語句.bind(this), 後端網址: 'http://140.109.16.144/'}
+            {後端網址: 'http://140.109.16.144/',
+            換腔口: this.換腔口.bind(this),
+            跳到語句: this.跳到語句.bind(this),
+            }
           )}
           <footer className='app footer inverted'>
             <ul className='ui menu container inverted'>

@@ -12,8 +12,9 @@ export default class 查 extends React.Component {
   render () {
     debug('rendering ')
     return (
-        <div className='main container'>
-        <textarea id='輸入' defaultValue={this.props.params.ku} onKeyUp={this.props.跳到語句.bind(this)}></textarea>
+        <div className='main container'>        
+        <textarea id='腔口' defaultValue={this.props.params.khiunn} onKeyUp={this.props.換腔口.bind(this)}></textarea>
+        <textarea id='語句' defaultValue={this.props.params.ku} onKeyUp={this.props.跳到語句.bind(this)}></textarea>
         <br/>
         <翻譯結果 後端網址={this.props.後端網址}
           腔口={this.props.params.khiunn}
