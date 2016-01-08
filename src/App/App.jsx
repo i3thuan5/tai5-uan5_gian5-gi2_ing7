@@ -14,7 +14,7 @@ class App extends React.Component {
 
   跳到語句 (textarea) {
     console.log(this.props.history)
-    this.props.history.replaceState(null, '/k/' + textarea.target.value)
+    this.props.history.replaceState(null, '/k/閩南語/' + textarea.target.value)
   }
 
   render () {
