@@ -13,11 +13,10 @@ export default class 查 extends React.Component {
     debug('rendering ')
     return (
         <div className='main container'>
-        <textarea id='輸入' defaultValue='漂亮a'></textarea>
+        <textarea id='輸入' defaultValue='漂亮a' onKeyUp={this.props.跳到語句.bind(this)}></textarea>
         <br/>
-        <input type='button' id='翻譯' value='翻譯'/>
-        <br/>
-        <翻譯結果 後端網址={this.props.後端網址}/>
+        <翻譯結果 後端網址={this.props.後端網址}
+          語句={this.props.params.k}/>
         </div>
       )
   }

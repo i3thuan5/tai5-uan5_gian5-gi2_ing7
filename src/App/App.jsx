@@ -12,9 +12,9 @@ class App extends React.Component {
     super()
   }
 
-  kong (k) {
+  跳到語句 (textarea) {
     console.log(this.props.history)
-    this.props.history.replaceState(null, '/k/' + k)
+    this.props.history.replaceState(null, '/k/' + textarea.target.value)
   }
 
   render () {
@@ -24,7 +24,7 @@ class App extends React.Component {
             <ToLam/>
           </header>
           {React.cloneElement(this.props.children, 
-            {handleKong: this.kong.bind(this), 後端網址: 'http://140.109.16.144/'}
+            {跳到語句: this.跳到語句.bind(this), 後端網址: 'http://140.109.16.144/'}
           )}
           <footer className='app footer inverted'>
             <ul className='ui menu container inverted'>

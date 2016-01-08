@@ -11,7 +11,7 @@ class 翻譯結果 extends React.Component {
 
   componentWillMount () { this.props.setQueryParams(this.props) }
   componentWillReceiveProps (nextProps) {
-    if (nextProps.params === this.props.params) return
+    if (nextProps === this.props) return
     this.props.setQueryParams(nextProps)
   }
 
@@ -28,16 +28,16 @@ class 翻譯結果 extends React.Component {
 
 export default Transmit.createContainer(翻譯結果, {
   queries: {
-    查詢結果 ({params, 後端網址}) {
-    	debug('query %o',params)
+    查詢結果 ({語句, 後端網址}) {
+    	debug('query %o',語句)
       return superagent.post(後端網址+'%E6%AD%A3%E8%A6%8F%E5%8C%96%E7%BF%BB%E8%AD%AF')
   	    .set('Content-Type', 'application/x-www-form-urlencoded')
   		  .send({
 //  	          '查詢語句': params.k,
-  	          '查詢語句': '漂亮',
+  	          '查詢語句': 語句,
   	        })
           .then(({text}) => ({
-  	          '查詢語句': '漂亮',
+  	          '查詢語句': 語句,
             '訊息': text,
           }))
           .catch((err) => ({
