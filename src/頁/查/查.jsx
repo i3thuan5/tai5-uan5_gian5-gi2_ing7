@@ -1,6 +1,7 @@
 
 import React from 'react'
 import {Link} from 'react-router'
+import Transmit from 'react-transmit'
 import superagent from 'superagent-bluebird-promise'
 import Debug from 'debug'
 import 翻譯結果 from '../../元素/翻譯結果/翻譯結果'
@@ -8,7 +9,14 @@ var Select = require('react-select');
 
 var debug = Debug('ing7:查')
 
-export default class 查 extends React.Component {
+class 查 extends React.Component {
+
+  componentWillMount () { this.props.setQueryParams(this.props) }
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.後端網址 === this.props.後端網址) return
+    this.props.setQueryParams(nextProps)
+  }
+  
   constructor (props) {
     super(props)
     this.state = {
@@ -27,17 +35,19 @@ export default class 查 extends React.Component {
     this.props.跳到腔口語句(this.state.腔口,語句)
   }
   render () {
+    debug ('22 %o',this.props.支援腔口)
     let {腔口,語句} = this.state
-	var options = [
-	    { value: '四縣腔', label: '四縣腔' },
-	    { value: '閩南語', label: '閩南語' }
-	];
+	let 全部腔口 = [];
+    let {支援腔口}=this.props
+	支援腔口.forEach(
+	  (腔口)=>(全部腔口.push({ value: 腔口, label: 腔口 }))
+	)
     return (
         <div className='main container'>
 		<Select
 		    name="form-field-name"
 		    value={腔口}
-		    options={options}
+		    options={全部腔口}
 		    onChange={this.換腔口.bind(this)}
 		    clearable={false}
 		/>
@@ -50,3 +60,20 @@ export default class 查 extends React.Component {
       )
   }
 }
+
+
+export default Transmit.createContainer(查, {
+  queries: {
+      支援腔口 ({後端網址}) {
+    	debug('query 22',)
+      return superagent.get(後端網址+'正規化翻譯支援腔口')
+          .then(({body}) => (
+			body.腔口
+		  ))
+          .catch((err) => ({
+            '訊息': '發生錯誤'
+          }))
+    }
+  
+  }
+})
