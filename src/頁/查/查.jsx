@@ -24,8 +24,8 @@ class 查 extends React.Component {
     	語句:this.props.params.ku || ''
     }
   }
-  換腔口 (val) {
-    let 腔口=val
+  換腔口 (_select) {
+    let 腔口=_select.target.value
     this.setState({腔口})
     this.props.跳到腔口語句(腔口,this.state.語句)
   }
@@ -39,18 +39,16 @@ class 查 extends React.Component {
     let {腔口,語句} = this.state
 	let 全部腔口 = [];
     let {支援腔口}=this.props
-	支援腔口.forEach(
-	  (腔口)=>(全部腔口.push({ value: 腔口, label: 腔口 }))
+    支援腔口.forEach(
+	  (腔口)=>(全部腔口.push(
+	    <option value={腔口}>{腔口}</option>
+		))
 	)
-    return (
+	return (
         <div className='main container'>
-		<Select
-		    name="form-field-name"
-		    value={腔口}
-		    options={全部腔口}
-		    onChange={this.換腔口.bind(this)}
-		    clearable={false}
-		/>
+		<select onChange={this.換腔口.bind(this)} value={腔口}>
+		{全部腔口}
+		</select>
         <textarea id='語句' defaultValue={this.props.params.ku} onKeyUp={this.跳到語句.bind(this)}></textarea>
         <br/>
         <翻譯結果 後端網址={this.props.後端網址}

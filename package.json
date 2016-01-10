@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/g0v/taigi-neologism",
   "dependencies": {
-    "react-select": "^0.9.1"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",
