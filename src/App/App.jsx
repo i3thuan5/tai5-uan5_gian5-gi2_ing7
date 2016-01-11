@@ -12,7 +12,7 @@ class App extends React.Component {
 
   跳到腔口語句 (腔口,語句) {
     this.props.history.replaceState(null,
-	'/k/' + 腔口 + '/' + 語句)
+	'/講/' + 腔口 + '/' + 語句)
   }
 
   render () {

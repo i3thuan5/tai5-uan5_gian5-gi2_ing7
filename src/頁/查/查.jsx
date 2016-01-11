@@ -21,7 +21,7 @@ class 查 extends React.Component {
     super(props)
     this.state = {
 		腔口:this.props.params.khiunn || '閩南語',
-    	語句:this.props.params.ku || '你好嗎？'
+    	語句:this.props.params.ku || '你好嗎？我很好！'
     }
   }
   換腔口 (_select) {
