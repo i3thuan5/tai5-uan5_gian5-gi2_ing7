@@ -2,7 +2,7 @@ import React from 'react'
 import Transmit from 'react-transmit'
 import Router from 'react-router'
 
-import ToLam from '../GuanKiann/ToLam/ToLam'
+import ToLam from '../元素/導覽/導覽'
 
 class App extends React.Component {
 
