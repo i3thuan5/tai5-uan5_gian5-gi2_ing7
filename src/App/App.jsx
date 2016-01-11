@@ -4,8 +4,6 @@ import Router from 'react-router'
 
 import ToLam from '../GuanKiann/ToLam/ToLam'
 
-import './App.css'
-
 class App extends React.Component {
 
   constructor () {
