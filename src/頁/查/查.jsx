@@ -60,7 +60,9 @@ class 查 extends React.Component {
 
 export default Transmit.createContainer(查, {
   queries: {
-      支援腔口 ({後端網址}) {
+    支援腔口 ({後端網址}) {
+      if (後端網址===undefined)
+        return Promise.resolve([])
       return superagent.get(後端網址+'正規化翻譯支援腔口')
           .then(({body}) => (
 			body.腔口

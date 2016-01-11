@@ -30,7 +30,12 @@ class 翻譯結果 extends React.Component {
 export default Transmit.createContainer(翻譯結果, {
   queries: {
     查詢結果 ({後端網址, 腔口, 語句}) {
-    	debug('query %o',語句)
+      if (後端網址===undefined)
+        return Promise.resolve({
+  	        '查詢腔口': 腔口,
+  	        '查詢語句': 語句,
+            '訊息': '連線中……',
+          })
       return superagent.post(後端網址+'%E6%AD%A3%E8%A6%8F%E5%8C%96%E7%BF%BB%E8%AD%AF')
   	    .set('Content-Type', 'application/x-www-form-urlencoded')
   		  .send({
@@ -43,8 +48,8 @@ export default Transmit.createContainer(翻譯結果, {
             '訊息': text,
           }))
           .catch((err) => ({
-            '關鍵字': '漂亮',
-            '結果': -1,
+  	          '查詢腔口': 腔口,
+  	          '查詢語句': 語句,
             '訊息': '發生錯誤',
             '內容': err
           }))
