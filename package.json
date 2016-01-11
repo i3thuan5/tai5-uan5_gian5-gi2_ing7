@@ -1,7 +1,7 @@
 {
   "name": "ing7",
   "version": "0.0.1",
-  "description": "itaigi",
+  "description": "臺灣言語服務用法",
   "scripts": {
     "start": "node devServer.js",
     "build": "mkdir -p build;rm -f build/* && NODE_ENV=production webpack --config webpack.config.prod.js && (echo 'itaigi.tw' > build/CNAME) && cp index.html build/ && cp index.html build/404.html",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/g0v/taigi-neologism.git"
+    "url": "https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7.git"
   },
   "keywords": [
-    "g0v"
+    "臺語"
   ],
-  "author": "itaigi",
+  "author": "薛丞宏",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/g0v/taigi-neologism/issues"
+    "url": "https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7/issues"
   },
-  "homepage": "https://github.com/g0v/taigi-neologism",
+  "homepage": "https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7",
   "dependencies": {
   },
   "devDependencies": {
