@@ -24,6 +24,7 @@ const root = document.getElementById('app')
       <Route path='/' component={App}>
         <IndexRoute component={查}/>
         <Route path='k(/:khiunn/:ku)' component={查}/>
+        <Route path='k(/:khiunn)' component={查}/>
         <Route path='iong' component={Iong}/>
         <Route path='mia' component={Mia}/>
       </Route>
