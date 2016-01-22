@@ -35,7 +35,7 @@ class 查 extends React.Component {
     this.props.跳到腔口語句(this.state.腔口,語句)
   }
   render () {
-    let {腔口,語句} = this.state
+    let {腔口, 語句} = this.state
     let {支援腔口}=this.props
 	let 全部腔口 = 支援腔口.map(
 	  (腔口)=>(
