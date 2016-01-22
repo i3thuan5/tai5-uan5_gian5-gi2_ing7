@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 import Transmit from 'react-transmit'
 import superagent from 'superagent-bluebird-promise'
 import Debug from 'debug'
-import 翻譯結果 from '../../元素/翻譯結果/翻譯結果'
+import 翻譯結果 from '../../元素/翻譯/翻譯結果'
 var Select = require('react-select');
 
 var debug = Debug('ing7:查')
