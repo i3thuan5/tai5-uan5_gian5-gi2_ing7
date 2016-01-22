@@ -17,11 +17,11 @@ class 翻譯結果 extends React.Component {
   }
 
   render () {
-    debug('rendering ', this.props.查詢結果)
+    debug(this.props.查詢結果['翻譯正規化結果'])
     return (
         <div className='main container'>
         <h3>結果：</h3>
-        <div id='輸出'>{this.props.查詢結果['訊息']}</div>
+        <div id='輸出'>{this.props.查詢結果['翻譯正規化結果']}</div>
         </div>
       )
   }
@@ -34,7 +34,7 @@ export default Transmit.createContainer(翻譯結果, {
         return Promise.resolve({
   	        '查詢腔口': 腔口,
   	        '查詢語句': 語句,
-            '訊息': '連線中……',
+            '翻譯正規化結果': '連線中……',
           })
       return superagent.post(後端網址+'%E6%AD%A3%E8%A6%8F%E5%8C%96%E7%BF%BB%E8%AD%AF')
   	    .set('Content-Type', 'application/x-www-form-urlencoded')
@@ -42,16 +42,16 @@ export default Transmit.createContainer(翻譯結果, {
   	          '查詢腔口': 腔口,
   	          '查詢語句': 語句,
   	        })
-          .then(({text}) => ({
+          .then(({body}) => ({
   	          '查詢腔口': 腔口,
   	          '查詢語句': 語句,
-            '訊息': text,
+              '翻譯正規化結果': body.翻譯正規化結果,
           }))
           .catch((err) => ({
   	          '查詢腔口': 腔口,
   	          '查詢語句': 語句,
-            '訊息': '發生錯誤',
-            '內容': err
+              '翻譯正規化結果': '發生錯誤',
+              '內容': err
           }))
     }
   }
