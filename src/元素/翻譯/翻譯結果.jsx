@@ -4,6 +4,7 @@ import Transmit from 'react-transmit'
 import {Link} from 'react-router'
 import superagent from 'superagent-bluebird-promise'
 import Debug from 'debug'
+import 合成結果 from '../合成/合成結果'
 
 var debug = Debug('ing7:翻譯結果')
 
@@ -22,6 +23,9 @@ class 翻譯結果 extends React.Component {
         <div className='main container'>
         <h3>結果：</h3>
         <div id='輸出'>{this.props.查詢結果['翻譯正規化結果']}</div>
+        <合成結果 後端網址={this.props.後端網址}
+          腔口={this.props.腔口}
+          語句={this.props.查詢結果['翻譯正規化結果']}/>
         </div>
       )
   }
