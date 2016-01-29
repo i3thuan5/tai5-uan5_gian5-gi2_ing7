@@ -1,6 +1,6 @@
 
-import React from 'react'
-import Transmit from 'react-transmit'
+import React from 'react';
+import Transmit from 'react-transmit';
 
 class Mia extends React.Component {
   render () {
@@ -21,8 +21,8 @@ class Mia extends React.Component {
             </div>
           </div>
         </div>
-      )
+      );
   }
 }
 
-export default Transmit.createContainer(Mia, {})
+export default Transmit.createContainer(Mia, {});

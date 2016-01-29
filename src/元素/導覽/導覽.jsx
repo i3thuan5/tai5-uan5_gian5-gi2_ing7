@@ -1,8 +1,8 @@
 
-import React from 'react'
-import Transmit from 'react-transmit'
-import {Link} from 'react-router'
-import './導覽.css'
+import React from 'react';
+import Transmit from 'react-transmit';
+import {Link} from 'react-router';
+import './導覽.css';
 
 class ToLam extends React.Component {
   render () {
@@ -18,8 +18,8 @@ class ToLam extends React.Component {
         </ul>
         <div></div>
       </div>
-      )
+      );
   }
 }
 
-export default Transmit.createContainer(ToLam, { query: {} })
+export default Transmit.createContainer(ToLam, { query: {} });

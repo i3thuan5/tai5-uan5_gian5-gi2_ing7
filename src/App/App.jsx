@@ -1,19 +1,19 @@
-import React from 'react'
-import Transmit from 'react-transmit'
-import Router from 'react-router'
+import React from 'react';
+import Transmit from 'react-transmit';
+import Router from 'react-router';
 
-import ToLam from '../元素/導覽/導覽'
+import ToLam from '../元素/導覽/導覽';
 
 class App extends React.Component {
 
   constructor () {
-    super()
+    super();
   }
 
-  跳到腔口語句 (腔口,語句) {
-		  //'%E8%AC%9B' == '講'
+  跳到腔口語句 (腔口, 語句) {
+    //'%E8%AC%9B' == '講'
     this.props.history.replaceState(null,
-	'/%E8%AC%9B/' + 腔口 + '/' + 語句)
+    '/%E8%AC%9B/' + 腔口 + '/' + 語句);
   }
 
   render () {
@@ -22,9 +22,9 @@ class App extends React.Component {
           <header className='app header'>
             <ToLam/>
           </header>
-          {React.cloneElement(this.props.children, 
-            {後端網址: 'http://140.109.16.144/',
-            跳到腔口語句: this.跳到腔口語句.bind(this)
+          {React.cloneElement(this.props.children,
+            { 後端網址: 'http://140.109.16.144/',
+            跳到腔口語句: this.跳到腔口語句.bind(this),
             }
           )}
           <footer className='app footer inverted'>
@@ -34,8 +34,8 @@ class App extends React.Component {
             </ul>
           </footer>
         </div>
-      )
+      );
   }
 }
 
-export default Transmit.createContainer(App, { queries: {} })
+export default Transmit.createContainer(App, { queries: {} });

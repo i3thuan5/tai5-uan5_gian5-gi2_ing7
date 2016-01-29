@@ -1,6 +1,6 @@
 
-import React from 'react'
-import Transmit from 'react-transmit'
+import React from 'react';
+import Transmit from 'react-transmit';
 
 class Iong extends React.Component {
   render () {
@@ -21,8 +21,8 @@ class Iong extends React.Component {
             </div>
           </div>
         </div>
-      )
+      );
   }
 }
 
-export default Transmit.createContainer(Iong, {})
+export default Transmit.createContainer(Iong, {});
