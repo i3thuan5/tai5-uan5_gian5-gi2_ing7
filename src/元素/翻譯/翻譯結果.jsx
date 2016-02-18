@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
 import 合成結果 from '../合成/合成結果';
+import 無合成模型 from '../合成/無合成模型';
 
 var debug = Debug('ing7:翻譯結果');
 
@@ -31,7 +32,7 @@ class 翻譯結果 extends React.Component {
     }
 
     return (
-      <h3>QQ</h3>
+      <無合成模型/>
       );
   }
 
