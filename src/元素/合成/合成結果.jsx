@@ -17,13 +17,13 @@ class 合成結果 extends React.Component {
     this.props.setQueryParams(nextProps);
   }
 
-  render () {
-    let 合成音檔 = document.getElementById('合成音檔');
-    if (合成音檔)
-    {
-      合成音檔.load();
-    }
+  componentDidUpdate()
+  {
+    let 音檔 = document.getElementById('合成音檔');
+    音檔.load();
+  }
 
+  render () {
     return (
         <div className='main container'>
         <h3>合成結果：</h3>
