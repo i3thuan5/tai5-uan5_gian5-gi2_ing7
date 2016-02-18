@@ -10,7 +10,7 @@ class ToLam extends React.Component {
       <div className='app bar container'>
         <h1 className='title segment'>
           <Link to='/'>
-            臺灣言語服務用法
+            寫啥物！？臺灣言語服務用法
           </Link>
         </h1>
         <ul className='ui main menu'>
