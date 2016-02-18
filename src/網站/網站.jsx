@@ -4,7 +4,7 @@ import Router from 'react-router';
 
 import ToLam from '../元素/導覽/導覽';
 
-class App extends React.Component {
+class 網站 extends React.Component {
 
   constructor () {
     super();
@@ -38,4 +38,4 @@ class App extends React.Component {
   }
 }
 
-export default Transmit.createContainer(App, { queries: {} });
+export default Transmit.createContainer(網站, { queries: {} });
