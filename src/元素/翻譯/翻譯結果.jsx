@@ -38,10 +38,19 @@ class 翻譯結果 extends React.Component {
 
   render () {
     debug(this.props.查詢結果.翻譯正規化結果);
+    let 綜合標音 = this.props.查詢結果.翻譯正規化結果.map(
+      (綜合標音)=>綜合標音.map(
+        (標音,內容)=>(<p>標音,內容</p>)
+      )
+    );
     return (
         <div className='main container'>
         <h3>結果：</h3>
-        <div id='輸出'>{this.props.查詢結果.翻譯正規化結果}</div>
+        <div id='輸出'>
+          {this.props.查詢結果.翻譯正規化結果}
+          <br/>
+          {綜合標音}
+        </div>
         {this.顯示合成結果()}
         </div>
       );
@@ -67,6 +76,7 @@ export default Transmit.createContainer(翻譯結果, {
             '查詢腔口': 腔口,
             '查詢語句': 語句,
             '翻譯正規化結果': body.翻譯正規化結果,
+            '綜合標音': body.綜合標音,
           }))
           .catch((err) => ({
             '查詢腔口': 腔口,
