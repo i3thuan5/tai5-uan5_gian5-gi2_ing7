@@ -39,10 +39,9 @@ class 翻譯結果 extends React.Component {
   render () {
     debug(this.props.查詢結果);
     let 綜合標音 = this.props.查詢結果.綜合標音.map(
-      (綜音)=>{
-        let 結果=Object.keys(綜音).map((b)=>(<div>{b}:{綜音[b]}<br/></div>));
-        return <p>{結果}</p>
-      }
+      (綜音)=>(
+        <p>{Object.keys(綜音).map((b)=>(<div>{b}:{綜音[b]}<br/></div>))}</p>
+      )
     );
     return (
         <div className='main container'>
@@ -50,8 +49,8 @@ class 翻譯結果 extends React.Component {
         <div id='輸出'>
           {this.props.查詢結果.翻譯正規化結果}
         {this.顯示合成結果()}
-          <br/>
-          {綜合標音}
+        <br/>
+        {綜合標音}
         </div>
         </div>
       );
