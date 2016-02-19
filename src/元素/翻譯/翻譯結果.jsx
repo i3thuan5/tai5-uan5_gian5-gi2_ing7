@@ -65,6 +65,7 @@ export default Transmit.createContainer(翻譯結果, {
           '查詢腔口': 腔口,
           '查詢語句': 語句,
           '翻譯正規化結果': '連線中……',
+          '綜合標音': [],
         });
       return superagent.post(後端網址 + '%E6%AD%A3%E8%A6%8F%E5%8C%96%E7%BF%BB%E8%AD%AF')
           .set('Content-Type', 'application/x-www-form-urlencoded')
@@ -72,19 +73,19 @@ export default Transmit.createContainer(翻譯結果, {
               '查詢腔口': 腔口,
               '查詢語句': 語句,
             })
-          .then(({ body }) => ({
+          .then(({ body }) => (Promise.resolve({
             '查詢腔口': 腔口,
             '查詢語句': 語句,
             '翻譯正規化結果': body.翻譯正規化結果,
             '綜合標音': body.綜合標音,
-          }))
-          .catch((err) => ({
+          })))
+          .catch((err) => (Promise.resolve({
             '查詢腔口': 腔口,
             '查詢語句': 語句,
             '翻譯正規化結果': '發生錯誤',
             '綜合標音': [],
             '內容': err,
-          }));
+          })));
     },
 
     合成支援腔口({ 後端網址 }) {
