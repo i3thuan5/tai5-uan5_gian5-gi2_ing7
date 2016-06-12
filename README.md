@@ -8,7 +8,7 @@
 * API介面
   * [apiary](https://app.apiary.io/tai5uan5gian5gi2hok8bu7/editor)
 * 前端網頁
-  * [用法](http://用.意傳.台灣/)
+  * [用法](http://寫啥物.意傳.台灣/)
 * 相關專案
   * [臺灣言語服務](https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_hok8-bu7)
   * [臺灣言語資料庫](https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_tsu1-liau7-khoo3)
