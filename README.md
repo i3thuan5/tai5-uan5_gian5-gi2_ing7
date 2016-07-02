@@ -1,5 +1,6 @@
 # 臺灣言語用
 [![Build Status](https://travis-ci.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7.svg?branch=master)](https://travis-ci.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7)
+[![devDependency Status](https://david-dm.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7/dev-status.svg)](https://david-dm.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7#info=devDependencies)
 
 [臺灣言語服務](https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_hok8-bu7)的前端範例。
 
