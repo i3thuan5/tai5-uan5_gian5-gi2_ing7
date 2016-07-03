@@ -1,14 +1,12 @@
 import React from 'react';
 import Transmit from 'react-transmit';
 import Router from 'react-router';
-
 import ToLam from '../元素/導覽/導覽';
 
-class 網站 extends React.Component {
+import Debug from 'debug';
+var debug = Debug('ing7:網站');
 
-  constructor () {
-    super();
-  }
+class 網站 extends React.Component {
 
   跳到腔口語句 (腔口, 語句) {
     //'%E8%AC%9B' == '講'
