@@ -1,12 +1,9 @@
 
 import React from 'react';
-import {render} from 'react-dom';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-import HuanGing from './Iah/HuanGing/HuanGing';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import 網站 from './網站/網站';
 import 查 from './頁/查/查';
-import Iong from './Iah/Iong/Iong';
-import Mia from './Iah/Mia/Mia';
 import './app.css';
 
 import Debug from 'debug';
@@ -23,8 +20,6 @@ render(
               <Route path='%E8%AC%9B(/:khiunn/:ku)' component={查}/>
               <Route path='%E8%AC%9B(/:khiunn)' component={查}/>
               <Route path='%E8%AC%9B' component={查}/>
-              <Route path='iong' component={Iong}/>
-              <Route path='mia' component={Mia}/>
           </Route>
       </Router>,
       root

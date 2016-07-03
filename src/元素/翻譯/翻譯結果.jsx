@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Transmit from 'react-transmit';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
 import 合成結果 from '../合成/合成結果';
@@ -39,9 +39,9 @@ class 翻譯結果 extends React.Component {
   render () {
     debug(this.props.查詢結果.綜合標音);
     let 綜合標音 = this.props.查詢結果.綜合標音.map(
-      (綜音,i)=>(
+      (綜音, i)=>(
         <div key={i}>{Object.keys(綜音).map(
-          (b,j)=>(<div key={j}>{b}:{綜音[b]}<br/></div>)
+          (b, j)=>(<div key={j}>{b}:{綜音[b]}<br/></div>)
         )}</div>
       )
     );

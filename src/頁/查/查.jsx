@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import Transmit from 'react-transmit';
 import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
@@ -20,8 +20,8 @@ class 查 extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      腔口:this.props.params.khiunn || '閩南語',
-      語句:this.props.params.ku || '你好嗎？我很好！',
+      腔口: this.props.params.khiunn || '閩南語',
+      語句: this.props.params.ku || '你好嗎？我很好！',
     };
   }
 

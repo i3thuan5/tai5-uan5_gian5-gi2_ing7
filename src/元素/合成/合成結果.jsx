@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Transmit from 'react-transmit';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
 

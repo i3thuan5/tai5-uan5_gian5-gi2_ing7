@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Transmit from 'react-transmit';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import './導覽.css';
 
 class ToLam extends React.Component {
