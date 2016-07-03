@@ -9,7 +9,6 @@ var debug = Debug('ing7:無合成模型');
 
 class 無合成模型 extends React.Component {
 
-
   render () {
     return (
         <div className='main container'>
