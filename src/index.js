@@ -1,7 +1,7 @@
 
 import React from 'react';
-import {render} from 'react-dom';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import HuanGing from './Iah/HuanGing/HuanGing';
 import 網站 from './網站/網站';
 import 查 from './頁/查/查';
