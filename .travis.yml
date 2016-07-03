@@ -17,5 +17,5 @@ branches:
   only:
   - master
 script:
-- echo $TSI2_LING7
+- echo npm run $TSI2_LING7
 - npm run $TSI2_LING7
