@@ -20,7 +20,8 @@ export default class 查 extends React.Component {
     this.state = {
       腔口: this.props.params.khiunn || '閩南語',
       語句: this.props.params.ku || '你好嗎？我很好！',
-      翻譯支援腔口: [],
+      翻譯支援腔口: ['載入中……'],
+      合成支援腔口: ['載入中……'],
     };
   }
 
@@ -29,6 +30,9 @@ export default class 查 extends React.Component {
     let { 後端網址 } = props;
     superagent.get(後端網址 + '正規化翻譯支援腔口')
         .then(({ body }) =>    this.setState({ 翻譯支援腔口: body.腔口 }))
+        .catch((err) => (['發生錯誤']));
+    superagent.get(後端網址 + '語音合成支援腔口')
+        .then(({ body }) =>    this.setState({ 合成支援腔口: body.腔口 }))
         .catch((err) => (['發生錯誤']));
   }
 
@@ -45,8 +49,8 @@ export default class 查 extends React.Component {
   }
 
   render () {
-    let { 腔口, 語句 } = this.state;
-    let 全部腔口 = this.state.翻譯支援腔口.map(
+    let { 腔口, 語句, 翻譯支援腔口, 合成支援腔口 } = this.state;
+    let 全部腔口 = 翻譯支援腔口.map(
       (腔口)=>(<option key={腔口} value={腔口}>{腔口}</option>)
     );
     return (
@@ -59,6 +63,7 @@ export default class 查 extends React.Component {
         <翻譯結果 後端網址={this.props.後端網址}
             腔口={腔口}
             語句={語句}
+            合成支援腔口={合成支援腔口}
           />
       </div>
     );

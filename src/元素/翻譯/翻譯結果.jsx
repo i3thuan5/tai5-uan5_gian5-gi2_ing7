@@ -89,14 +89,5 @@ export default Transmit.createContainer(翻譯結果, {
           })));
     },
 
-    合成支援腔口({ 後端網址 }) {
-      if (後端網址 === undefined)
-        return Promise.resolve([]);
-      return superagent.get(後端網址 + '語音合成支援腔口')
-          .then(({ body }) => (
-            body.腔口
-          ))
-          .catch((err) => (['發生錯誤']));
-    },
   },
 });
