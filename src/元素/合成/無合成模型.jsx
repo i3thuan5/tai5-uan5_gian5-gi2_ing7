@@ -1,13 +1,12 @@
 
 import React from 'react';
-import Transmit from 'react-transmit';
 import { Link } from 'react-router';
 import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
 
 var debug = Debug('ing7:無合成模型');
 
-class 無合成模型 extends React.Component {
+export default class 無合成模型 extends React.Component {
 
   render () {
     return (
@@ -19,8 +18,3 @@ class 無合成模型 extends React.Component {
       );
   }
 }
-
-export default Transmit.createContainer(無合成模型, {
-  queries: {
-  },
-});

@@ -1,13 +1,10 @@
 
 import React from 'react';
-import Transmit from 'react-transmit';
-import { Link } from 'react-router';
-import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
 
 var debug = Debug('ing7:合成結果');
 
-class 合成結果 extends React.Component {
+export default class 合成結果 extends React.Component {
 
   componentWillMount () { this.props.setQueryParams(this.props); }
 
@@ -37,8 +34,3 @@ class 合成結果 extends React.Component {
       );
   }
 }
-
-export default Transmit.createContainer(合成結果, {
-  queries: {
-  },
-});
