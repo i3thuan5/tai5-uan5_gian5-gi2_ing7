@@ -6,14 +6,6 @@ var debug = Debug('ing7:合成結果');
 
 export default class 合成結果 extends React.Component {
 
-  componentWillMount () { this.props.setQueryParams(this.props); }
-
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.腔口 === this.props.腔口
-      && nextProps.語句 === this.props.語句) return;
-    this.props.setQueryParams(nextProps);
-  }
-
   componentDidUpdate()
   {
     let 音檔 = document.getElementById('合成音檔');
