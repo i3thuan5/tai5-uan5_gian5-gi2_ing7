@@ -1,10 +1,9 @@
 
 import React from 'react';
-import Transmit from 'react-transmit';
 import { Link } from 'react-router';
 import './導覽.css';
 
-class ToLam extends React.Component {
+export default class ToLam extends React.Component {
   render () {
     return (
       <div className='app bar container'>
@@ -21,5 +20,3 @@ class ToLam extends React.Component {
       );
   }
 }
-
-export default Transmit.createContainer(ToLam, { query: {} });

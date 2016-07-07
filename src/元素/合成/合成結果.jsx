@@ -1,24 +1,15 @@
 
 import React from 'react';
-import Transmit from 'react-transmit';
-import { Link } from 'react-router';
-import superagent from 'superagent-bluebird-promise';
 import Debug from 'debug';
 
 var debug = Debug('ing7:合成結果');
 
-class 合成結果 extends React.Component {
-
-  componentWillMount () { this.props.setQueryParams(this.props); }
+export default class 合成結果 extends React.Component {
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.腔口 === this.props.腔口
-      && nextProps.語句 === this.props.語句) return;
-    this.props.setQueryParams(nextProps);
-  }
-
-  componentDidUpdate()
-  {
+    if (nextProps.後端網址 === this.props.後端網址 &&
+      nextProps.腔口 === this.props.腔口 &&
+      nextProps.語句 === this.props.語句) return;
     let 音檔 = document.getElementById('合成音檔');
     音檔.load();
   }
@@ -37,8 +28,3 @@ class 合成結果 extends React.Component {
       );
   }
 }
-
-export default Transmit.createContainer(合成結果, {
-  queries: {
-  },
-});
