@@ -70,8 +70,7 @@ export default Transmit.createContainer(翻譯結果, {
           '綜合標音': [],
         });
       return superagent.get(後端網址 + '%E6%AD%A3%E8%A6%8F%E5%8C%96%E7%BF%BB%E8%AD%AF')
-          .set('Content-Type', 'application/x-www-form-urlencoded')
-            .send({
+            .query({
               '查詢腔口': 腔口,
               '查詢語句': 語句,
             })
