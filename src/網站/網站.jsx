@@ -1,5 +1,5 @@
 import React from 'react';
-import ToLam from '../元素/導覽/導覽';
+import ToLam from './導覽';
 
 import Debug from 'debug';
 var debug = Debug('ing7:網站');
