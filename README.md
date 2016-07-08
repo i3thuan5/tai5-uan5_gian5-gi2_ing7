@@ -1,4 +1,4 @@
-# 臺灣言語服務用法 - 語言服務工具
+# 臺灣言語服務用法 - 語言工具
 [![Build Status](https://travis-ci.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7.svg?branch=master)](https://travis-ci.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7)
 [![devDependency Status](https://david-dm.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7/dev-status.svg)](https://david-dm.org/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7#info=devDependencies)
 
