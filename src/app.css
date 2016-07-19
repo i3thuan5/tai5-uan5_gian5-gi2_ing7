@@ -23,7 +23,7 @@ body {
   line-height: 2rem;
 }
 
-.app .main.container  div {
+.app .main.container div, .app .main.container li{
   margin: 10px 0;
 }
 
