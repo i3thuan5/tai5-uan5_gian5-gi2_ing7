@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import 網站 from './網站/網站';
-import 查 from './頁/查/查';
+import 查 from './頁/查';
 import './app.css';
 
 import Debug from 'debug';
