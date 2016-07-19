@@ -24,7 +24,11 @@ body {
 }
 
 .app .main.container div, .app .main.container li{
-  margin: 10px 0;
+  margin: 0 0 10px;
+}
+
+.app .main.container ul{
+  margin: 0;
 }
 
 .app .app.header {
