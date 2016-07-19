@@ -11,8 +11,8 @@ export default class 介紹 extends React.Component {
   render () {
     return (
       <div className='main container'>
-        <p>本專案是提供臺灣母語的資訊技術，像是正規化翻譯、語音合成等Web-based服務</p>
-        <p>為了方便大家使用，每個語言獨立一頁，操作更順手</p>
+        <p>本專案是提供語言工具，像是文字正規化、語音合成等Web-based服務</p>
+        <p>為了方便大家使用，預計每個語言都有專門的網站，操作更順手</p>
         <ul>
           <li>
             <a href='http://xn--7zrr5mu7u.xn--v0qr21b.xn--kpry57d/'>臺語-寫啥物！？</a>
