@@ -81,7 +81,7 @@ export default class 翻譯結果 extends React.Component {
     if (!查詢結果)
     {
       return (
-        <div className='main container'>
+        <div className=''>
           <h3>載入中……</h3>
         </div>
         );
@@ -96,10 +96,10 @@ export default class 翻譯結果 extends React.Component {
       )
     );
     return (
-        <div className='main container'>
+        <div className=''>
           <h3>結果：</h3>
           <div id='輸出'>
-            {查詢結果.翻譯正規化結果}
+            <div>{查詢結果.翻譯正規化結果}</div>
             {this.顯示合成結果(查詢結果)}
             <br/>
             {綜合標音}

@@ -19,23 +19,16 @@ body {
   flex-flow: row wrap;
   flex-grow: 1;
   align-content: flex-start;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
-.navigation {
-  height: 50px;
-  margin: 2em 0;
-}
-
-.app .content {
-  width: 640px;
-}
-
-.app .right.column {
-  width: 320px;
+.app .main.container  div {
+  margin: 10px 0;
 }
 
 .app .app.header {
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .app .app.footer {

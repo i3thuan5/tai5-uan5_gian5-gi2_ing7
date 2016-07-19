@@ -1,12 +1,12 @@
-.app.bar {
-  display: flex;
+.app.bar.container {
   justify-content: space-between;
+}
+
+.app.bar * {
+  margin: 10px 0;
 }
 
 .app.bar .title {
   display: block;
-  margin: 0;
-  width: 500px;
-  height: 72px;
 }
 

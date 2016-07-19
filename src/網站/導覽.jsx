@@ -12,10 +12,8 @@ export default class ToLam extends React.Component {
             寫啥物！？臺灣言語服務用法
           </Link>
         </h1>
-        <ul className='ui main menu'>
-          <li className='item'><Link to='/'>按怎講</Link></li>
-        </ul>
-        <div></div>
+        <Link to='/' className="ui button basic primary large">這是啥</Link>
+        <Link to='/2' className="ui button basic primary large">按怎講</Link>
       </div>
       );
   }
