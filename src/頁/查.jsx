@@ -19,10 +19,10 @@ export default class 查 extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      腔口: this.props.params.khiunn || '閩南語',
+      腔口: this.props.params.khiunn || '四縣腔',
       語句: this.props.params.ku || '你好嗎？我很好！',
-      翻譯支援腔口: ['載入中……'],
-      合成支援腔口: ['載入中……'],
+      翻譯支援腔口: ['四縣腔'],
+      合成支援腔口: ['四縣腔'],
     };
   }
 
