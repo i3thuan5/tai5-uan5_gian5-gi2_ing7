@@ -16,6 +16,8 @@ export default class 介紹 extends React.Component {
         <ul>
           <li>
             <a href='http://xn--7zrr5mu7u.xn--v0qr21b.xn--kpry57d/'>寫啥物-臺語發音網站</a>
+          </li>
+          <li>
             <a href='http://xn--p8s96olm5c.xn--v0qr21b.xn--kpry57d'>鬥拍字-臺語漢字臺羅產生工具</a>
           </li>
           <li>
