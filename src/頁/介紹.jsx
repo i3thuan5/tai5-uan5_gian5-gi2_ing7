@@ -15,7 +15,8 @@ export default class 介紹 extends React.Component {
         <p>為了方便大家使用，預計每個語言都有專門的網站，操作更順手</p>
         <ul>
           <li>
-            <a href='http://xn--7zrr5mu7u.xn--v0qr21b.xn--kpry57d/'>臺語-寫啥物！？</a>
+            <a href='http://xn--7zrr5mu7u.xn--v0qr21b.xn--kpry57d/'>寫啥物-臺語發音網站</a>
+            <a href='http://xn--p8s96olm5c.xn--v0qr21b.xn--kpry57d'>鬥拍字-臺語漢字臺羅產生工具</a>
           </li>
           <li>
             其他語言先至<Link to='/%E8%AC%9B'>按怎講</Link>使用，也歡迎到<a href='https://g0v.hackpad.com/f4rSgcFTIzz'>我想幫忙</a>提供意見
