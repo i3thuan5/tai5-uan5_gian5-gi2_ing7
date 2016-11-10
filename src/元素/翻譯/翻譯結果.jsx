@@ -39,7 +39,7 @@ export default class 翻譯結果 extends React.Component {
               查詢結果:  {
                 '查詢腔口': 腔口,
                 '查詢語句': 語句,
-                '翻譯正規化結果': body.翻譯正規化結果,
+                '分詞': body.分詞,
                 '綜合標音': body.綜合標音,
               },
               頂一句腔口: 腔口,
@@ -49,7 +49,7 @@ export default class 翻譯結果 extends React.Component {
               查詢結果:  {
                 '查詢腔口': 腔口,
                 '查詢語句': 語句,
-                '翻譯正規化結果': '發生錯誤',
+                '分詞': '發生錯誤',
                 '綜合標音': [],
                 '內容': err,
               },
@@ -67,7 +67,7 @@ export default class 翻譯結果 extends React.Component {
       return (
         <合成結果 後端網址={this.props.後端網址}
           腔口={this.props.腔口}
-          語句={查詢結果.翻譯正規化結果}/>
+          語句={查詢結果.分詞}/>
           );
     }
 
@@ -98,7 +98,7 @@ export default class 翻譯結果 extends React.Component {
     return (
         <div className=''>
           <div id='輸出'>
-            <div>{查詢結果.翻譯正規化結果}</div>
+            <div>{查詢結果.分詞}</div>
             {this.顯示合成結果(查詢結果)}
             <br/>
             {綜合標音}
