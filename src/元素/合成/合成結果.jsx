@@ -21,7 +21,7 @@ export default class 合成結果 extends React.Component {
           <source type="audio/wav"
              src={this.props.後端網址
                + '語音合成?查詢腔口=' + this.props.腔口
-               + '&查詢語句=' + this.props.語句}/>
+               + '&查詢語句=' + encodeURIComponent(this.props.語句)}/>
         </audio>
         </div>
       );
