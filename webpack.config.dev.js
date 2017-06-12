@@ -16,9 +16,15 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      tensuConfig: "tensuConfig",
+    }),
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
+    alias: {
+      tensuConfig: path.join(path.resolve(), "taupahji.config.js"),
+    },
   },
   module: {
     loaders: [{
@@ -31,7 +37,7 @@ module.exports = {
       loader: 'style-loader!css-loader!postcss-loader',
     },
     {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)$/,
       loader: 'url-loader?limit=1',
     },
     {
