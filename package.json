@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7.git"
+    "url": "https://github.com/i3thuan5/tai5-uan5_gian5-gi2_ing7.git"
   },
   "keywords": [
     "臺語"
@@ -19,9 +19,9 @@
   "author": "薛丞宏",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7/issues"
+    "url": "https://github.com/i3thuan5/tai5-uan5_gian5-gi2_ing7/issues"
   },
-  "homepage": "https://github.com/sih4sing5hong5/tai5-uan5_gian5-gi2_ing7",
+  "homepage": "https://github.com/i3thuan5/tai5-uan5_gian5-gi2_ing7",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
